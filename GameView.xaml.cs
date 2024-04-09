@@ -36,12 +36,12 @@ namespace TicTacToe
                 button.Content = isPlayerOneTurn ? "X" : "O";
                 if (CheckForWinner())
                 {
-                    MessageBox.Show(isPlayerOneTurn ? "Player 1 Wins!" : "Player 2 Wins!");
+                    MessageBox.Show(isPlayerOneTurn ? "Player 1 Wins" : "Player 2 Wins");
                     ResetBoard();
                 }
                 else if (IsBoardFull())
                 {
-                    MessageBox.Show("It's a draw!");
+                    MessageBox.Show("It's a draw");
                     ResetBoard();
                 }
                 isPlayerOneTurn = !isPlayerOneTurn;

@@ -9,7 +9,6 @@ namespace TicTacToe
         {
             base.OnStartup(e);
 
-            // Create the main application window
             MainWindow mainWindow = new MainWindow();
             mainWindow.Show();
         }
