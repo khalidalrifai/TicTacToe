@@ -1,32 +1,42 @@
-﻿using System.Windows;
-using TicTacToe;
+﻿using System;
+using System.Windows;
+using System.Windows.Controls;
 
 namespace TicTacToe
-{ 
-    public partial class MainWindow : Window
+{
+    public partial class WelcomeView : UserControl
     {
-        public MainWindow()
+        public class StartGameEventArgs : EventArgs
+        {
+            public bool IsVsComputer { get; set; }
+            public string Difficulty { get; set; }
+        }
+
+        public event EventHandler<StartGameEventArgs> StartGameClicked;
+
+        public WelcomeView()
         {
             InitializeComponent();
-            ShowWelcomeView();
         }
 
-        private void ShowWelcomeView()
+        private void StartGame_Click(object sender, RoutedEventArgs e)
         {
-            // Initialize the WelcomeView
-            WelcomeView welcomeView = new WelcomeView();
-            // Subscribe to the StartGameClicked event
-            welcomeView.StartGameClicked += WelcomeView_StartGameClicked;
-            // Set the WelcomeView as the content of the MainContent Control
-            MainContent.Content = welcomeView;
+            var args = new StartGameEventArgs
+            {
+                IsVsComputer = (bool)(FindName("Play Against the Computer") as RadioButton)?.IsChecked,
+                Difficulty = Difficulty.IsEnabled ? (Difficulty.SelectedItem as ComboBoxItem)?.Content.ToString() ?? "Easy" : "Easy"
+            };
+
+            StartGameClicked?.Invoke(this, args);
         }
 
-        private void WelcomeView_StartGameClicked(object sender, System.EventArgs e)
+        private void RadioButton_Checked(object sender, RoutedEventArgs e)
         {
-            // Initialize the GameView
-            GameView gameView = new GameView();
-            // Set the GameView as the content of the MainContent Control
-            MainContent.Content = gameView;
+            var radioButton = sender as RadioButton;
+            if (radioButton != null)
+            {
+                Difficulty.IsEnabled = radioButton.Content.ToString() == "Play Against the Computer";
+            }
         }
     }
 }
