@@ -13,7 +13,7 @@
             <Setter Property="BorderThickness" Value="0"/>
             <Setter Property="Padding" Value="20"/>
             <Setter Property="FontSize" Value="36"/>
-            <Setter Property="Margin" Value="20"/>
+            <Setter Property="Margin" Value="50,20,50,20"/>
             <Setter Property="Effect">
                 <Setter.Value>
                     <DropShadowEffect Color="Black" BlurRadius="10" ShadowDepth="2"/>
@@ -63,21 +63,28 @@
                    TextWrapping="Wrap"
                    Height="Auto"/>
 
-        <TextBlock Text="Click the button below to start playing." 
-                   FontSize="24" 
-                   Foreground="White"
-                   Margin="20"
-                   TextAlignment="Center"/>
+        <RadioButton Content="Play Against Another Player" 
+                     IsChecked="True" 
+                     Foreground="White" 
+                     FontSize="20" 
+                     Margin="50,5,50,5"/>
+        <RadioButton Content="Play Against the Computer" 
+                     Foreground="White" 
+                     FontSize="20" 
+                     Margin="50,5,50,5"/>
+
+        <ComboBox x:Name="Difficulty" 
+                  Margin="50,20,50,20"
+                  FontSize="20" 
+                  IsEnabled="False">
+            <ComboBoxItem Content="Easy"/>
+            <ComboBoxItem Content="Medium"/>
+            <ComboBoxItem Content="Hard"/>
+        </ComboBox>
 
         <Button Content="Start Game" 
-                Click="StartGame_Click" 
-                FontSize="36" 
-                Padding="20" 
-                Margin="50,20,50,20"
-                Foreground="White"
-                Background="#FF4CAF50"
-                BorderThickness="0"
-                Style="{StaticResource RoundedButtonStyle}"/>
+        Click="StartGame_Click" 
+        Style="{StaticResource RoundedButtonStyle}"/>
 
     </StackPanel>
 </UserControl>
