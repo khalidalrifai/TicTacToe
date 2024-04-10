@@ -51,14 +51,14 @@
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
 
-        <Button x:Name="Button0" Grid.Row="0" Grid.Column="0" Style="{StaticResource TicTacToeButtonStyle}" Click="Button_Click"/>
-        <Button x:Name="Button1" Grid.Row="0" Grid.Column="1" Style="{StaticResource TicTacToeButtonStyle}" Click="Button_Click"/>
-        <Button x:Name="Button2" Grid.Row="0" Grid.Column="2" Style="{StaticResource TicTacToeButtonStyle}" Click="Button_Click"/>
-        <Button x:Name="Button3" Grid.Row="1" Grid.Column="0" Style="{StaticResource TicTacToeButtonStyle}" Click="Button_Click"/>
-        <Button x:Name="Button4" Grid.Row="1" Grid.Column="1" Style="{StaticResource TicTacToeButtonStyle}" Click="Button_Click"/>
-        <Button x:Name="Button5" Grid.Row="1" Grid.Column="2" Style="{StaticResource TicTacToeButtonStyle}" Click="Button_Click"/>
-        <Button x:Name="Button6" Grid.Row="2" Grid.Column="0" Style="{StaticResource TicTacToeButtonStyle}" Click="Button_Click"/>
-        <Button x:Name="Button7" Grid.Row="2" Grid.Column="1" Style="{StaticResource TicTacToeButtonStyle}" Click="Button_Click"/>
-        <Button x:Name="Button8" Grid.Row="2" Grid.Column="2" Style="{StaticResource TicTacToeButtonStyle}" Click="Button_Click"/>
+        <Button x:Name="Button0" Tag="0" Grid.Row="0" Grid.Column="0" Content="" Style="{StaticResource TicTacToeButtonStyle}" Click="Button_Click"/>
+        <Button x:Name="Button1" Tag="1" Grid.Row="0" Grid.Column="1" Content="" Style="{StaticResource TicTacToeButtonStyle}" Click="Button_Click"/>
+        <Button x:Name="Button2" Tag="2" Grid.Row="0" Grid.Column="2" Content="" Style="{StaticResource TicTacToeButtonStyle}" Click="Button_Click"/>
+        <Button x:Name="Button3" Tag="3" Grid.Row="1" Grid.Column="0" Content="" Style="{StaticResource TicTacToeButtonStyle}" Click="Button_Click"/>
+        <Button x:Name="Button4" Tag="4" Grid.Row="1" Grid.Column="1" Content="" Style="{StaticResource TicTacToeButtonStyle}" Click="Button_Click"/>
+        <Button x:Name="Button5" Tag="5" Grid.Row="1" Grid.Column="2" Content="" Style="{StaticResource TicTacToeButtonStyle}" Click="Button_Click"/>
+        <Button x:Name="Button6" Tag="6" Grid.Row="2" Grid.Column="0" Content="" Style="{StaticResource TicTacToeButtonStyle}" Click="Button_Click"/>
+        <Button x:Name="Button7" Tag="7" Grid.Row="2" Grid.Column="1" Content="" Style="{StaticResource TicTacToeButtonStyle}" Click="Button_Click"/>
+        <Button x:Name="Button8" Tag="8" Grid.Row="2" Grid.Column="2" Content="" Style="{StaticResource TicTacToeButtonStyle}" Click="Button_Click"/>
     </Grid>
 </UserControl>
